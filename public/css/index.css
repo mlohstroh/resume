@@ -1,0 +1,24 @@
+.page-top-buffer {
+    margin-top: 30px;
+}
+
+.header {
+    color: #269ccc;
+}
+
+.profile-thumbnail {
+    width: 350px;
+    height: 525px;
+}
+
+body {
+    background: #f8f8f8;
+}
+
+.list-text {
+    font-size: 1.2em;
+}
+
+.job-title {
+    
+}
