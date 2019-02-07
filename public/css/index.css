@@ -20,5 +20,11 @@ body {
 }
 
 .job-title {
-    
+    font-style: italic;
+}
+
+.social-link {
+    margin-right: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
