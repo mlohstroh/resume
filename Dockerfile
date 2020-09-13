@@ -1,9 +1,15 @@
-FROM golang:1.10-stretch
+FROM  golang:1.13-alpine as go-build
 
-WORKDIR /go/src/resume
+WORKDIR /app
+RUN apk add --no-cache git make gcc musl-dev
 COPY . .
+RUN make install
 
-RUN go get -d -v ./...
-RUN go install -v ./...
+FROM alpine:latest
+
+WORKDIR /app
+COPY --from=go-build /bin/resume /bin/resume
+
+EXPOSE ${PORT}
 
 CMD ["resume"]
