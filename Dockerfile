@@ -9,6 +9,7 @@ FROM alpine:latest
 
 WORKDIR /app
 COPY --from=go-build /bin/resume /bin/resume
+COPY public public
 
 EXPOSE ${PORT}
 
