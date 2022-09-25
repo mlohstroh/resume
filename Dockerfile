@@ -1,4 +1,4 @@
-FROM  golang:1.13-alpine as go-build
+FROM  golang:1.18-alpine as go-build
 
 WORKDIR /app
 RUN apk add --no-cache git make gcc musl-dev
